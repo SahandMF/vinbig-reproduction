@@ -354,15 +354,13 @@ Use `--use_wandb` (and optionally `--wandb-project <name>`) to:
 - Save configuration
 - Visualize training curves
 
-### RetMed lineage
-This repository reuses and extends parts of the RetMed pipeline. For more background, see `cxr_detection_replication/retmed` and the original RetMed README structure.
+### RetMed and efficientdet-pytorch lineage
+This repository reuses and extends parts of the RetMed and efficientdet-pytorch pipeline. For more background, see `[retmed](https://github.com/alexkubl/retmed/tree/main)` and [efficientdet-pytorch](https://github.com/alexkubl/retmed/tree/main) their original README structure.
 
 ### Development
 - Python version: 3.9 (recommended)
 - Code style: keep edits minimal and avoid breaking existing configs.
 - Optional: enable W&B logging with `--use_wandb` (MMDet) or `wandb` configured in your environment.
 
-### License
-See individual subdirectories and third-party components for their respective licenses.
 
 
