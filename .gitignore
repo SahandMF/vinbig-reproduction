@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.env
+.pytest_cache/
+
+# Editors/IDE
+.vscode/
+.idea/
+
+# Build & packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Data & outputs
+cxr_detection_replication/data/**
+!cxr_detection_replication/data/README*
+cxr_detection_replication/work_dirs/**
+cxr_detection_replication/efficientdet/output/**
+*.pth
+*.pth.tar
+*.pt
+*.ckpt
+
+# Visualizations & logs
+**/*.jpg
+**/*.png
+**/*.svg
+**/*.pdf
+**/training_log.txt
+**/summary.csv
+
+# Checkpoints & results
+**/best_*.pth
+**/*.json
+!cxr_detection_replication/configs/**/*.json
+
+
