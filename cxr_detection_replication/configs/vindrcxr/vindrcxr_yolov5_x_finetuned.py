@@ -14,8 +14,8 @@ seed = 0
 device = "cuda"
 log_level = 'INFO'  # The level of logging.
 
-data_root = '/home/sahand/Retmed-Latest/retmed/data/vinbig_cxr2'
-annotation_root = 'home/sahand/Retmed-Latest/retmed/data/sample_wbf/wbf_data/train_val_split'
+data_root = ''
+annotation_root = ''
 backend_args = None
 
 
@@ -100,7 +100,7 @@ default_hooks = dict(
 
 train_cfg = dict(max_epochs=max_epochs, type='EpochBasedTrainLoop', val_interval=val_interval)
 
-work_dir = '/home/sahand/vinbig_outputs/vindrcxr_yolov5_x'
+work_dir = ''
 
 # --- Model definition ---
 model = dict(
@@ -289,9 +289,9 @@ val_dataloader = dict(
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
         type='YOLOv5CocoDataset',
-        ann_file='data/ann_agreement_orig/label-4/val_fold_2.json',
+        ann_file='',
         data_root='',
-        data_prefix=dict(img='/media/klee_ro/public_datasets/vindr_cxr/train/'),
+        data_prefix=dict(img=''),
         batch_shapes_cfg=dict(type='BatchShapePolicy', batch_size=1, img_size=640, size_divisor=32, extra_pad_ratio=0.5),
         metainfo=dict(
             classes=[
@@ -325,7 +325,7 @@ test_dataloader = dict(
     dataset=dict(
         type='YOLOv5CocoDataset',
         ann_file='data/test.json',
-        data_root='/home/sahand/cxr-detection-replication/cxr_detection_replication/data/vinbig_cxr2',
+        data_root='',
         batch_shapes_cfg=dict(type='BatchShapePolicy', batch_size=1, img_size=640, size_divisor=32, extra_pad_ratio=0.5),
         metainfo=dict(
             classes=[
@@ -352,7 +352,7 @@ test_dataloader = dict(
 # --- Evaluators ---
 val_evaluator = dict(
     type='mmdet.CocoMetric',
-    ann_file='data/ann_agreement_orig/label-4/val_fold_2.json',
+    ann_file='',
     metric='bbox',
     proposal_nums=[100, 1, 10],
 )

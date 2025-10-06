@@ -21,8 +21,8 @@ palette = [(61, 61, 245), (128, 128, 0), (51, 221, 255), (250, 50, 83), (170, 24
            (36, 179, 83), (255, 204, 51), (89, 134, 179), (128, 0, 128), (42, 125, 209), (255, 0, 204),
            (255, 96, 55), (50, 183, 250)]
 
-data_root = '/home/sahand/Retmed-Latest/retmed/data/vinbig_cxr2'
-annotation_root = '/home/sahand/Retmed-Latest/retmed/data/sample_cv/wbf_data/cv_folds'
+data_root = ''
+annotation_root = ''
 backend_args = None
 
 train_pipeline = [
@@ -54,8 +54,8 @@ train_dataloader = dict(
     batch_sampler=dict(type='AspectRatioBatchSampler'),
     dataset=dict(
         data_root='',
-        ann_file= '/home/saifh/snap/snapd-desktop-integration/253/Desktop/retmed_saifh/data/folds2/train_fold_0.json',
-        data_prefix=dict(img='/media/arndt_ro/public_datasets/vindr_cxr/train/'),
+        ann_file= '',
+        data_prefix=dict(img=''),
         metainfo=dict(classes=classes, palette=palette),
         filter_cfg=dict(filter_empty_gt=True, min_size=32),
         pipeline=train_pipeline,
@@ -70,8 +70,8 @@ val_dataloader = dict(
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
         data_root='',
-        ann_file='/home/saifh/snap/snapd-desktop-integration/253/Desktop/retmed_saifh/data/folds2/val_fold_0.json',
-        data_prefix=dict(img='/media/arndt_ro/public_datasets/vindr_cxr/train/'),
+        ann_file='',
+        data_prefix=dict(img=''),
         metainfo=dict(classes=classes, palette=palette),
         test_mode=True,
         pipeline=test_pipeline,
@@ -90,7 +90,7 @@ val_cfg = dict(type='ValLoop')
 # Evaluator config for validation
 val_evaluator = dict(
     type='CocoMetric',
-    ann_file='/home/saifh/snap/snapd-desktop-integration/253/Desktop/retmed_saifh/data/folds2/val_fold_0.json',
+    ann_file='',
     metric=['bbox'],
     format_only=False,
     backend_args=backend_args)
@@ -142,7 +142,7 @@ visualizer = dict(
     type='DetLocalVisualizer', vis_backends=vis_backends, name='visualizer')
 log_processor = dict(type='LogProcessor', window_size=50, by_epoch=True)
 
-work_dir = '/home/sahand/vinbig_outputs/vindr_cxr_vfnet_nb'
+work_dir = ''
 
 
 test_dataloader = dict(
@@ -151,7 +151,7 @@ test_dataloader = dict(
     dataset=dict(
         type='CocoDataset',
         ann_file='data/test.json',
-        data_root='/home/sahand/cxr-detection-replication/cxr_detection_replication/data/vinbig_cxr2',
+        data_root='',
         pipeline=test_pipeline,
         metainfo=dict(classes=classes, palette=palette),
         test_mode=True

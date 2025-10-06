@@ -14,8 +14,8 @@ num_classes = 14
 palette = [(61, 61, 245), (128, 128, 0), (51, 221, 255), (250, 50, 83), (170, 240, 209), (131, 224, 112),
            (36, 179, 83), (255, 204, 51), (89, 134, 179), (128, 0, 128), (42, 125, 209), (255, 0, 204),
            (255, 96, 55), (50, 183, 250)]
-data_root = '/home/sahand/cxr-detection-replication/cxr_detection_replication/data/vinbig_cxr2'
-annotation_root = '/home/sahand/Retmed-Latest/retmed/data/sample_cv/wbf_data/cv_folds'
+data_root = ''
+annotation_root = ''
 backend_args = None
 
 train_pipeline = [
@@ -147,7 +147,7 @@ test_dataloader = dict(
     dataset=dict(
         type='CocoDataset',
         ann_file='data/test.json',
-        data_root='/home/sahand/cxr-detection-replication/cxr_detection_replication/data/vinbig_cxr2',
+        data_root='',
         pipeline=test_pipeline,
         metainfo=dict(classes=classes, palette=palette),
         test_mode=True

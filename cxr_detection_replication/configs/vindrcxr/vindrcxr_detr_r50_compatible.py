@@ -93,8 +93,8 @@ device = "cuda"
 log_level = 'INFO'
 
 # Data paths - these will be overridden by train.py
-data_root = '/home/sahand/cxr-detection-replication/cxr_detection_replication/data/vinbig_cxr2'
-annotation_root = '/home/sahand/cxr-detection-replication/cxr_detection_replication/data/sample_wbf/wbf_data/train_val_split'
+data_root = ''
+annotation_root = ''
 backend_args = None
 
 # Training parameters
@@ -183,7 +183,7 @@ visualizer = dict(
 log_processor = dict(type='LogProcessor', window_size=50, by_epoch=True)
 
 # Work directory - will be set by train.py
-work_dir = '/home/sahand/vinbig_outputs/vindrcxr_detr_r50_compatible'
+work_dir = ''
 
 # Dataloaders - these will be modified by train.py
 train_dataloader = dict(

@@ -14,8 +14,8 @@ seed = 0
 device = "cuda"
 log_level = 'INFO'  # The level of logging.
 
-data_root = '/home/sahand/Retmed-Latest/retmed/data/vinbig_cxr2'
-annotation_root = 'home/sahand/Retmed-Latest/retmed/data/sample_wbf/wbf_data/train_val_split'
+data_root = ''
+annotation_root = ''
 backend_args = None
 
 
@@ -93,7 +93,7 @@ default_hooks = dict(
 
 train_cfg = dict(max_epochs=max_epochs, type='EpochBasedTrainLoop', val_interval=val_interval)
 
-work_dir = '/home/sahand/vinbig_outputs/vindrcxr_yolov5_x'
+work_dir = ''
 
 model = dict(
     bbox_head=dict(
@@ -107,7 +107,7 @@ test_dataloader = dict(
     dataset=dict(
         type='YOLOv5CocoDataset',
         ann_file='data/test.json',
-        data_root='/home/sahand/cxr-detection-replication/cxr_detection_replication/data/vinbig_cxr2',
+        data_root='',
         pipeline=[
             dict(type='LoadImageFromFile', backend_args=backend_args),
             dict(type='Resize', scale=(640, 640), keep_ratio=False),
