@@ -6,7 +6,7 @@ Unified chest X-ray detection toolkit combining MMDetection-based pipelines (DET
 - **Project 1 (MMDet/MMYOLO)**: configs under `cxr_detection_replication/configs`, entrypoints in `cxr_detection_replication/tools`.
 - **Project 2 (EfficientDet)**: located at `cxr_detection_replication/efficientdet` with its native trainer and a CV orchestrator.
 - Unified trainer `cxr_detection_replication/tools/train.py` now supports both ecosystems via `--trainer {mmdet,effdet}`.
-- - The accompanying project report and thesis defense presentation slides are provided in the [`readme/`](readme) folder: [`Project Report`](readme/Thesis_Report) and [`Presentation slides`](readme/Presentation-12-12-2025).
+- - The accompanying project report and thesis defense presentation slides are provided in the [`readme/`](readme) folder: [`Project Report`](readme/Thesis_Report.pdf) and [`Presentation`](readme/Presentation-12-12-2025.pdf).
 
 This repo targets the VinBigData Chest X-ray Abnormalities Detection task (14 classes) and includes helpers for COCO-style evaluation and Kaggle CSV conversion.
 
