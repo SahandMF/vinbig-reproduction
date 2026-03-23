@@ -6,8 +6,11 @@ Unified chest X-ray detection toolkit combining MMDetection-based pipelines (DET
 - **Project 1 (MMDet/MMYOLO)**: configs under `cxr_detection_replication/configs`, entrypoints in `cxr_detection_replication/tools`.
 - **Project 2 (EfficientDet)**: located at `cxr_detection_replication/efficientdet` with its native trainer and a CV orchestrator.
 - Unified trainer `cxr_detection_replication/tools/train.py` now supports both ecosystems via `--trainer {mmdet,effdet}`.
+- - The accompanying project report and thesis defense presentation slides are provided in the [`readme/`](readme) folder: [`Project Report`](readme/Thesis_Report) and [`Presentation slides`](readme/Presentation-12-12-2025).
 
 This repo targets the VinBigData Chest X-ray Abnormalities Detection task (14 classes) and includes helpers for COCO-style evaluation and Kaggle CSV conversion.
+
+If you use this repository or its accompanying materials, please see the [Citation](#citation) section.
 
 ### Installation (known-good matrix)
 This project was developed with Python 3.9 (conda env `cxr-python39`). The following matrix is verified for both EfficientDet and MMDetection:
@@ -363,4 +366,14 @@ This repository reuses and extends parts of the RetMed and efficientdet-pytorch 
 - Optional: enable W&B logging with `--use_wandb` (MMDet) or `wandb` configured in your environment.
 
 
+## Citation
 
+If you use this repository in your research, project, or academic work, please cite it as:
+
+```bibtex
+@software{majdabadifarahani2025vinbigreproduction,
+  author = {Sahand Majdabadi Farahani},
+  title = {vinbig-reproduction: Unified Chest X-ray Detection Benchmarking on VinBigData},
+  year = {2025},
+  url = {https://github.com/SahandMF/vinbig-reproduction}
+}
